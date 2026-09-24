@@ -1,15 +1,15 @@
 :root{--deep:#14532d;--leaf:#4d9a3a;--cream:#faf6ea;--earth:#8a5a2b;--ink:#1f2a1f;--white:#fff;--soft:#eaf3df;--maroon:#7a1f2b}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:Mulish,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--deep);line-height:1.2}
+body{font-family:Mulish,"Noto Sans Devanagari",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+h1,h2,h3{font-family:Fraunces,"Noto Serif Devanagari",Georgia,serif;color:var(--deep);line-height:1.2}
 h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:.5rem}
 a{color:inherit}
 section{padding:4.5rem 1.2rem}
 .wrap{max-width:1080px;margin:auto}
 .alt{background:var(--white)}
 .lead{max-width:60ch;color:#3d4a3d;margin-bottom:2rem}
-.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem Mulish,sans-serif;padding:.85rem 1.6rem;border-radius:999px;background:var(--leaf);color:#fff;text-decoration:none;transition:.2s}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem Mulish,"Noto Sans Devanagari",sans-serif;padding:.85rem 1.6rem;border-radius:999px;background:var(--leaf);color:#fff;text-decoration:none;transition:.2s}
 .btn:hover{background:var(--deep);transform:translateY(-2px)}
 .btn.ghost{background:transparent;border:2px solid var(--deep);color:var(--deep)}
 .btn.ghost:hover{background:var(--deep);color:#fff}
@@ -17,7 +17,7 @@ section{padding:4.5rem 1.2rem}
 /* nav */
 header{position:sticky;top:0;z-index:50;background:rgba(250,246,234,.96);backdrop-filter:blur(6px);border-bottom:1px solid #d9e4c8}
 nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.6rem 1.2rem;gap:1rem}
-.brand{display:flex;align-items:center;gap:.5rem;font:700 1.05rem Fraunces,serif;color:var(--deep);text-decoration:none}
+.brand{display:flex;align-items:center;gap:.5rem;font:700 1.05rem Fraunces,"Noto Serif Devanagari",serif;color:var(--deep);text-decoration:none}
 .brand svg{width:34px;height:34px}
 .links{display:flex;gap:1.1rem;list-style:none;padding:0;align-items:center}
 .links a{text-decoration:none;font-weight:600;font-size:.92rem}
@@ -27,7 +27,7 @@ nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content
 .hero{background:linear-gradient(160deg,#f3f8e8 0%,var(--cream) 55%,#e4efd2 100%);position:relative;overflow:hidden;padding-top:3.5rem}
 .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center}
 .hero h1{font-size:clamp(2.4rem,7vw,4.2rem)}
-.hero .sub{font:600 1.3rem Fraunces,serif;color:var(--maroon);margin:.4rem 0 1rem}
+.hero .sub{font:600 1.3rem Fraunces,"Noto Serif Devanagari",serif;color:var(--maroon);margin:.4rem 0 1rem}
 .badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0}
 .badges span{background:var(--white);border:1.5px solid var(--leaf);border-radius:999px;padding:.35rem .9rem;font-weight:700;font-size:.88rem;color:var(--deep)}
 .cta-row{display:flex;gap:.8rem;flex-wrap:wrap}
@@ -40,17 +40,17 @@ nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
 .card{background:var(--white);border:1px solid #dbe6cb;border-radius:18px;padding:1.2rem}
 .alt .card{background:var(--cream)}
-.card b{display:block;font:700 1.35rem Fraunces,serif;color:var(--deep)}
+.card b{display:block;font:700 1.35rem Fraunces,"Noto Serif Devanagari",serif;color:var(--deep)}
 .card small{color:#5b675b}
 .card h3{font-size:1.1rem;margin-bottom:.5rem}
 .card ul{padding-left:1.1rem;font-size:.93rem}
 .ico{font-size:1.8rem;display:block;margin-bottom:.3rem}
 .pillars{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.5rem 0}
-.pillars span{flex:1 1 180px;text-align:center;padding:1rem;border-radius:999px;background:var(--deep);color:#fff;font:600 1.05rem Fraunces,serif}
+.pillars span{flex:1 1 180px;text-align:center;padding:1rem;border-radius:999px;background:var(--deep);color:#fff;font:600 1.05rem Fraunces,"Noto Serif Devanagari",serif}
 .note{font-size:.88rem;color:var(--earth);margin-top:1rem;font-style:italic}
 /* accordion */
 details{background:var(--white);border:1px solid #dbe6cb;border-radius:16px;margin-bottom:.8rem;overflow:hidden}
-summary{cursor:pointer;padding:1rem 1.2rem;font:700 1.1rem Fraunces,serif;color:var(--deep);list-style:none;display:flex;justify-content:space-between}
+summary{cursor:pointer;padding:1rem 1.2rem;font:700 1.1rem Fraunces,"Noto Serif Devanagari",serif;color:var(--deep);list-style:none;display:flex;justify-content:space-between}
 summary::after{content:"+";font-size:1.4rem;color:var(--leaf);transition:.2s}
 details[open] summary::after{transform:rotate(45deg)}
 .body{padding:0 1.2rem 1.2rem}
@@ -85,13 +85,13 @@ input.bad,select.bad,textarea.bad{border-color:#c0392b}
 .hide{display:none!important}
 #done{text-align:center}
 #done h3{font-size:1.8rem}
-.ref{font:700 1.5rem Fraunces,serif;background:var(--soft);display:inline-block;padding:.5rem 1.2rem;border-radius:12px;margin:.8rem 0}
+.ref{font:700 1.5rem Fraunces,"Noto Serif Devanagari",serif;background:var(--soft);display:inline-block;padding:.5rem 1.2rem;border-radius:12px;margin:.8rem 0}
 #done dl{text-align:left;max-width:380px;margin:1rem auto;display:grid;grid-template-columns:auto 1fr;gap:.3rem 1rem}
 #done dt{font-weight:700}
 /* offer */
 .topbar{background:var(--maroon);color:#fff;text-align:center;font-weight:700;font-size:.9rem;padding:.45rem 1rem}
 .topbar a{text-decoration:underline}
-.offer{position:fixed;right:14px;bottom:14px;z-index:60;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle,#ffd54a,#f29d1f);color:#5b2a00;font:800 .78rem/1.15 Mulish,sans-serif;text-align:center;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pulse 1.6s infinite}
+.offer{position:fixed;right:14px;bottom:14px;z-index:60;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle,#ffd54a,#f29d1f);color:#5b2a00;font:800 .78rem/1.15 Mulish,"Noto Sans Devanagari",sans-serif;text-align:center;display:grid;place-items:center;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pulse 1.6s infinite}
 .offer span{display:block;font-size:1.5rem}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,157,31,.7)}70%{box-shadow:0 0 0 22px rgba(242,157,31,0)}100%{box-shadow:0 0 0 0 rgba(242,157,31,0)}}
 footer{background:var(--deep);color:#dbe9cc;text-align:center;padding:2.5rem 1rem}
@@ -110,3 +110,6 @@ section{padding:3rem 1rem}
 .offer{width:82px;height:82px;font-size:.68rem}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+
+#lang{width:auto;font:700 .85rem Mulish,"Noto Sans Devanagari",sans-serif;padding:.4rem .6rem;border-radius:999px;border:1.5px solid var(--leaf);background:var(--white);color:var(--deep);cursor:pointer}
+html[lang=hi] body,html[lang=mr] body{line-height:1.8}

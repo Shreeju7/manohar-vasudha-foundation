@@ -29,7 +29,7 @@ function show(n) {
   cur = n;
   steps.forEach((s, i) => s.classList.toggle("show", i === n));
   document.querySelectorAll("#prog i").forEach((b, i) => b.classList.toggle("on", i <= n));
-  $("#sname").textContent = `Step ${n + 1} of ${steps.length}: ${steps[n].dataset.name}`;
+  $("#sname").textContent = `${t("Step")} ${n + 1}/${steps.length}: ${t(steps[n].dataset.name)}`;
   $("#back").style.visibility = n ? "visible" : "hidden";
   $("#next").classList.toggle("hide", n === steps.length - 1);
   $("#submit").classList.toggle("hide", n !== steps.length - 1);
@@ -45,8 +45,8 @@ function validate(step) {
   });
   if (firstBad) {
     $("#err").textContent = firstBad.type === "checkbox"
-      ? "Please tick the declaration to continue."
-      : "Please check: " + (firstBad.title || firstBad.closest("label").firstChild.textContent.replace("*", "")) + ".";
+      ? t("Please tick the declaration to continue.")
+      : t("Please check:") + " " + (t(firstBad.title) || firstBad.closest("label").firstChild.textContent.replace("*", "")) + ".";
     firstBad.focus();
   } else $("#err").textContent = "";
   return !firstBad;
@@ -67,7 +67,7 @@ $("#form").onsubmit = async e => {
   data.course = "C.C. in Yoga & Naturopathy (201208), 1 Year, Part-Time";
   data.refNo = ref; data.submittedAt = d.toLocaleString();
   fd.append("refNo", ref); fd.append("course", data.course);
-  $("#submit").disabled = true; $("#submit").textContent = "Submitting...";
+  $("#submit").disabled = true; $("#submit").textContent = t("Submitting...");
   try {
     if (CONFIG.endpoint) {
       const r = await fetch(CONFIG.endpoint, { method: "POST", body: fd, headers: { Accept: "application/json" } });
@@ -77,8 +77,8 @@ $("#form").onsubmit = async e => {
       all.push(data); localStorage.setItem("mvfApplications", JSON.stringify(all));
     }
   } catch (_) {
-    $("#err").textContent = "Submission failed. Please try again or call 9987941559.";
-    $("#submit").disabled = false; $("#submit").textContent = "Submit Admission Application";
+    $("#err").textContent = t("Submission failed. Please try again or call 9987941559.");
+    $("#submit").disabled = false; $("#submit").textContent = t("Submit Admission Application");
     return;
   }
   last = data;
@@ -87,7 +87,7 @@ $("#form").onsubmit = async e => {
   $("#sum").innerHTML = [["Application No.", ref], ["Applicant", data.fullName], ["Course", "C.C. in Yoga & Naturopathy"], ["Submitted", data.submittedAt]]
     .map(([k, v]) => `<dt>${k}</dt><dd></dd>`).join("");
   document.querySelectorAll("#sum dd").forEach((dd, i) => dd.textContent = [ref, data.fullName, "C.C. in Yoga & Naturopathy", data.submittedAt][i]);
-  $("#done").classList.remove("hide"); $("#done").focus();
+  applyLang(); $("#done").classList.remove("hide"); $("#done").focus();
   $("#admission").scrollIntoView();
 };
 
@@ -98,4 +98,5 @@ $("#dl").onclick = () => {
   a.download = last.refNo + ".txt"; a.click();
 };
 
+document.addEventListener("langchange", () => show(cur));
 show(0);
